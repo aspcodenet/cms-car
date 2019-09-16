@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilCms", "BilCms\BilCms.csproj", "{39245B36-F14E-4210-AC70-B664CA7CC9AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39245B36-F14E-4210-AC70-B664CA7CC9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39245B36-F14E-4210-AC70-B664CA7CC9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39245B36-F14E-4210-AC70-B664CA7CC9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39245B36-F14E-4210-AC70-B664CA7CC9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32016C85-38E5-486D-963B-1B1389EB1EB3}
+	EndGlobalSection
+EndGlobal
