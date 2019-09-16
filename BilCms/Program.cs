@@ -52,6 +52,7 @@ namespace BilCms
                 Console.WriteLine("2. List all cars");
                 Console.WriteLine("3. Update car");
                 Console.WriteLine("4. Delete car");
+                Console.WriteLine("5. Search car");
                 int sel = Convert.ToInt32(Console.ReadLine());
                 if(sel == 1)
                 {
@@ -60,7 +61,8 @@ namespace BilCms
                 }
                 else if(sel == 2)
                 {
-                    ListAllCars(allaBilar);
+                    ListCars(allaBilar,
+                        " ***Cars for sale ***") ;
                 }
                 else if (sel == 3)
                 {
@@ -72,8 +74,29 @@ namespace BilCms
                     var car = SelectACar(allaBilar);
                     allaBilar.Remove(car);
                 }
+                else if (sel == 5)
+                {
+                    SearchCar(allaBilar);
+                }
             }
 
+
+        }
+
+        private static void SearchCar(List<Car> allaBilar)
+        {
+            Console.WriteLine("*** Search car ***");
+            Console.Write("Search for");
+            string input = Console.ReadLine().ToLower();
+            var searchResultList = new List<Car>();
+
+            foreach(var car in allaBilar)
+            {
+                if (car.Make.ToLower().Contains(input) ||
+                    car.Model.ToLower().Contains(input))
+                    searchResultList.Add(car);
+            }
+            ListCars(searchResultList, $"Search result - searching for {input}");
 
         }
 
@@ -107,9 +130,11 @@ namespace BilCms
             return allaBilar[selectedCar-1];
         }
 
-        private static void ListAllCars(List<Car> allaBilar)
+
+        private static void ListCars(List<Car> allaBilar,
+            string text)
         {
-            Console.WriteLine("*** Cars for sale ***");
+            Console.WriteLine(text);
             foreach(var car in allaBilar)
             {
                 Console.WriteLine($"{car.Make} {car.Model} costs {car.Price}");
